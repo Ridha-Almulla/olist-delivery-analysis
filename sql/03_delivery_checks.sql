@@ -4,7 +4,9 @@
 --   8 have no customer delivery date.
 --   2 have no carrier date.
 --   23 have carrier date after customer delivery date.
--- Decision: pending.
+-- Decision 1: exclude the 8 orders with no customer date from delay analysis.
+-- Decision 2: keep the 25 orders with a wrong carrier date for the delay rate,
+--   but exclude them from the seller vs carrier question.
 
 SELECT
   COUNT(*) AS delivered_orders,

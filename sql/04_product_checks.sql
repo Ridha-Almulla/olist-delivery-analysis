@@ -3,7 +3,8 @@
 -- Result: 32,951 products.
 --   610 have no category.
 --   13 have a category with no English name.
--- Decision: pending.
+-- Decision: keep these products. Delay questions do not need the category.
+--   If I group by category, empty ones are labeled 'unknown'.
 
 SELECT
   COUNT(*) AS all_products,

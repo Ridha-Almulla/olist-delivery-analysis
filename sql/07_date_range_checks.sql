@@ -3,7 +3,8 @@
 -- Result: purchases from 2016-09-15 to 2018-08-29.
 --   0 delivered before purchase. 0 promised before purchase.
 --   Longest delivery: 210 days. 298 orders took more than 60 days.
--- Decision: pending.
+-- Decision: keep the 298 long orders. They are real delays, not errors.
+--   To limit their effect, use the median and delay groups.
 
 SELECT
   MIN(order_purchase_timestamp) AS first_purchase,
